@@ -17,6 +17,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+from YoungHarness import views
+
 urlpatterns = [
+    path('', views.index),
+    path('api/chat/stream', views.chat_stream),
     path('admin/', admin.site.urls),
 ]
